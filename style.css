@@ -1,0 +1,94 @@
+/* For Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Lobster&family=Noto+Sans:wght@400;500;600&family=Open+Sans&family=Poppins:wght@500&family=Work+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --primary-color: #3a3a3a;
+    --hot-pink: #E02C6D;
+}
+
+.btn-primary {
+    color: #ffffff;
+    border-radius: 40px;
+    border: none;
+    padding: 8px 20px;
+    text-transform: uppercase;
+    background-color: var(--hot-pink);
+}
+
+/* Navigation Starts */
+.section-primary {
+    max-width: 100%;
+    width: 1250px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.navigation h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-color);
+    ;
+}
+
+.navigation ul li {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* Banner Section */
+.banner {
+    margin-top: 150px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 130px;
+}
+
+.banner__text__container {
+    position: relative;
+    top: 100px;
+}
+
+.banner__text__container h1 {
+    font-weight: 700;
+    font-size: 52px;
+    color: var(--primary-color);
+}
+
+.banner__text__container p{
+    margin: 20px 0;
+}
+
+.circle {
+    height: 475px;
+    width: 475px;
+}
+
+.banner-camera{
+    height: 414px;
+    width: 440px;
+}
+
+.banner-camera {
+    position: relative;
+    bottom: 450px;
+}
