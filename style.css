@@ -34,6 +34,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 0;
 }
 
 .navigation ul {
@@ -55,32 +56,130 @@
 }
 
 /* Banner Section */
-.banner{
+.banner {
     margin-top: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 50px;
-    
 }
-.banner-left{
-    width: 50%;
 
-}
-.banner-right{
+.banner-left {
     width: 50%;
-    overflow:hidden;
 }
-.circle{
-    height: 440px;
-    width: 440px;
-    
+
+.banner-left h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    padding-bottom: 15px;
 }
-.main-camera{
-    height: 420px;
-    width: 410px;
+
+.banner-left p {
+    font-size: 1.1rem;
+    padding-bottom: 20px;
+}
+
+.banner-right {
+    width: 50%;
+    margin-top: 95px;
     position: relative;
-    bottom: 438px;
+}
+
+.circle {}
+
+.main-camera {
+    position: absolute;
+    bottom: 50px;
+}
+
+/* Partnership Section */
+.partnership {
+    height: 110px;
+    margin-top: 70px;
+    border-radius: 6px;
+    background-color: #f5f3f348;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.popular-collection-title {
+    font-size: 3rem;
+    text-align: center;
+    padding: 75px 0;
+}
+
+/* Collection Section */
+.collection-container {
+    margin-bottom: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 30px;
+    grid-column-gap: 5px;
+}
+
+.collection {
+    width: 329px;
+    height: 476px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+    padding: 15px;
+}
+
+.collection img {
+    width: 300px;
+    height: 256px;
+}
+
+/* see more */
+.see-more {
+    color: var(--hot-pink);
+}
+
+.see-more {
+    margin-left: 1350px;
+}
+
+/* join now banner */
+.join-now-banner {
+    margin: 100px auto;
+    width: 1300px;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+.join-img {
+    width: 404px;
+    height: 270px;
+}
+
+.join-now-info h1{
+    font-size: 3rem;
+}
+
+.join-now-info p{
+    padding: 15px 0;
+}
+.join-btn{
+    border-radius: 5px;
+}
+/* footer */
+footer{
+    padding-top: 50px;
+    height: 30vh;
+    background-color: #0A0826;
+    color: white;
+    text-align: center;
+}
+
+.footer h2{
+    font-size: 1.5rem;
+    padding-bottom: 5px;
+}
+
+.footer p{
+    padding-bottom: 10px;
 }
 /* ---------------
 Responsiveness
@@ -88,11 +187,35 @@ Responsiveness
 /* Mobile Device */
 @media only screen and (max-width: 576px) {
 
-    .banner{
+    .banner {
         flex-direction: column-reverse;
         gap: 0px;
     }
-    .banner-camera{
+
+    .banner-camera {
         position: absolute;
+    }
+    .brand-name{
+        display: none;
+    }
+    ul{
+        flex-direction: column;
+        text-align: left;
+        flex-shrink: 0;
+    }
+    .banner-right{
+       margin-right: 60px;
+    }
+    .banner-left{
+        margin-left: 70px;
+        text-align: left;
+    }
+    .circle img{
+        height: 350px;
+        width: 350px;
+    }
+    .main-camera img{
+        height: 350px;
+        width: 350px;
     }
 }
