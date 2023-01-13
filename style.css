@@ -46,7 +46,6 @@
     font-size: 24px;
     font-weight: 700;
     color: var(--primary-color);
-    ;
 }
 
 .navigation ul li {
@@ -56,39 +55,44 @@
 }
 
 /* Banner Section */
-.banner {
-    margin-top: 150px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 130px;
+.banner{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    
 }
+.banner-left{
+    width: 50%;
 
-.banner__text__container {
-    position: relative;
-    top: 100px;
 }
-
-.banner__text__container h1 {
-    font-weight: 700;
-    font-size: 52px;
-    color: var(--primary-color);
+.banner-right{
+    width: 50%;
+    overflow:hidden;
 }
-
-.banner__text__container p{
-    margin: 20px 0;
-}
-
-.circle {
-    height: 475px;
-    width: 475px;
-}
-
-.banner-camera{
-    height: 414px;
+.circle{
+    height: 440px;
     width: 440px;
+    
 }
-
-.banner-camera {
+.main-camera{
+    height: 420px;
+    width: 410px;
     position: relative;
-    bottom: 450px;
+    bottom: 438px;
+}
+/* ---------------
+Responsiveness
+------------------ */
+/* Mobile Device */
+@media only screen and (max-width: 576px) {
+
+    .banner{
+        flex-direction: column-reverse;
+        gap: 0px;
+    }
+    .banner-camera{
+        position: absolute;
+    }
 }
