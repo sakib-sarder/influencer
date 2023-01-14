@@ -7,6 +7,15 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+img{
+    height: 100%;
+    width: 100%;
+}
+.section-primary{
+    width: 1200px;
+    margin: auto;
+    max-width: 100%;
+}
 
 :root {
     --primary-color: #3a3a3a;
@@ -23,37 +32,40 @@
 }
 
 /* Navigation Starts */
-.section-primary {
-    max-width: 100%;
-    width: 1250px;
-    margin: 0 auto;
-    padding: 0 25px;
-}
-
-.navigation {
+.navbar{
+    margin-top: 50px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
+    justify-content: space-around;
 }
-
-.navigation ul {
+.navbar-ul{
     display: flex;
+}
+.navbar-ul li{
     list-style: none;
-    gap: 20px;
+    padding: 0px 20px;
 }
-
-.navigation h1 {
-    font-size: 24px;
+.navbar-ul a{
+    text-decoration: none;
+    color: black;
+    transition: 0.4s ease;
+}
+.icon i{
+    padding-right: 15px;
+    transition: 0.4s ease;
+}
+.logo{
+    font-size: 1.5rem;
     font-weight: 700;
-    color: var(--primary-color);
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+.navbar-ul a:hover{
+    color: rgb(170, 211, 197);
+}
+.icon i:hover{
+    color: rgb(245, 231, 103);
 }
 
-.navigation ul li {
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--primary-color);
-}
 
 /* Banner Section */
 .banner {
@@ -64,9 +76,6 @@
     gap: 50px;
 }
 
-.banner-left {
-    width: 50%;
-}
 
 .banner-left h1 {
     font-size: 3rem;
@@ -80,7 +89,6 @@
 }
 
 .banner-right {
-    width: 50%;
     margin-top: 95px;
     position: relative;
 }
@@ -134,11 +142,10 @@
 /* see more */
 .see-more {
     color: var(--hot-pink);
+    display: flex;
+    justify-content: end;
 }
 
-.see-more {
-    margin-left: 1350px;
-}
 
 /* join now banner */
 .join-now-banner {
@@ -186,36 +193,44 @@ Responsiveness
 ------------------ */
 /* Mobile Device */
 @media only screen and (max-width: 576px) {
-
-    .banner {
+    .navbar{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        
+    }
+    ul li{
+        font-size: 13px;
+        font-weight: 700;}
+    .banner{
         flex-direction: column-reverse;
-        gap: 0px;
     }
-
-    .banner-camera {
-        position: absolute;
+    .partnership{
+        flex-wrap: wrap;
     }
-    .brand-name{
+    .collection-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .join-now-banner{
+        flex-direction: column-reverse;
+    }
+    .see-more{
         display: none;
     }
-    ul{
-        flex-direction: column;
-        text-align: left;
-        flex-shrink: 0;
+    img{
+        height: 100%;
+        width: 100%;
     }
-    .banner-right{
-       margin-right: 60px;
+    .banner-left, .join-now-info{
+        width: 90vw;
+        text-align: center;
     }
-    .banner-left{
-        margin-left: 70px;
-        text-align: left;
+    .collection{
+        width: 90vw;
+        margin: auto;
     }
-    .circle img{
-        height: 350px;
-        width: 350px;
-    }
-    .main-camera img{
-        height: 350px;
-        width: 350px;
+    .join-img{
+        width: 90vw;
     }
 }
