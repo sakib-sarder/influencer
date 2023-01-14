@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Lobster&family=Noto+Sans:wght@400;500;600&family=Open+Sans&family=Poppins:wght@500&family=Work+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root {
+    --primary-color: #3a3a3a;
+    --hot-pink: #E02C6D;
+}
+/* Header Section */
+.navigation{
+    padding: 20px;
+    margin-bottom: 50px;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+menu ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+/* Banner Section */
+.banner{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.section-left h1{
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.section-left p{
+    font-size: 1.2rem;
+    padding: 15px 0;
+}
+
+.banner-btn{
+    border: none;
+    padding: 20px 40px;
+    font-size: 1.3rem;
+    border-radius: 40px;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: var(--hot-pink);
+}
+
+.fa-arrow-right{
+    padding-left: 10px;
+    font-size: 1.5rem;
+}
+.section-right{
+    position: relative;
+}
+
+.circle{
+    position: absolute;
+    top: 0%;
+    z-index: 2;
+}
+.camera{
+    position: relative;
+    z-index: 3;
+}
+
+@media only screen and (max-width: 576px) {
+    /* header responsive */
+    .branding, .fa-magnifying-glass, .fa-cart-shopping{
+        display: none;
+    }
+
+    .banner{
+        flex-direction: column-reverse;
+        gap: 25px;
+        max-width: 100%;
+    }
+    img{
+        margin-right: 50px;
+        height: 200px;
+        width: 200px;
+    }
+    .section-right img{
+        margin: 0px auto;
+    }
+    .section-left{
+        text-align: center;
+        margin-left:auto;
+        flex-shrink: 0;
+    }
+
+    
+
+}
